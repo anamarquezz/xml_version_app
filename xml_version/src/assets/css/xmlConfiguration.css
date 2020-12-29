@@ -1,0 +1,57 @@
+.icons-search{   
+    display: grid;
+    place-content: end;   
+    width: 86%;    
+}
+
+.icons-search ul{
+    list-style: none;
+    display: inline;  
+    margin:1rem;  
+}
+
+.icons-search .fas{
+    margin-right:.5rem;
+    font-size: 2.5rem;    
+    
+}
+
+.icons-search .fas:hover{
+    transform: rotate3d(2, 5.0, 3.0, 20deg);
+    color:#525DBD;
+    cursor: pointer;
+}
+
+
+.cards-routers{
+    height: auto;
+    display: grid;
+    grid-gap: 4vw;
+    grid-template-columns: repeat(4, 250px);
+    padding-left:10vw;
+}
+
+.cards{
+    background-color: #525DBD;
+    box-shadow: 10px 15px #2e2e2e;
+    border-radius: 2rem;
+    text-align: center;
+    height: 24vh; 
+    
+}
+
+.cards:hover{
+    transform: rotate3d(1, 5.0, 3.0, 15deg);
+    box-shadow: 5px 10px #2e2e2e;
+    cursor: pointer;
+}
+
+.cards .img-size{
+    width: 10rem;
+}
+
+.cards .footer-card{    
+    color:white;
+    font-size: 3vh;
+    border-radius: 0 0 2rem 2rem;
+}
