@@ -5,25 +5,7 @@
     <MenuNavigation class="menu-navigation"></MenuNavigation>
     <ModelsNavigation class="model-navigation"></ModelsNavigation>
     <div class="center-info">
-
-      <div class="icons-search">
-        <ul class="ul-icons">
-          <i class="fas fa-chevron-circle-left"></i>
-          <i class="fas fa-search"></i>
-         <i class="fas fa-chevron-circle-right"></i>
-        </ul>
-      </div>
-      <div class="cards-routers">
-        <div class="cards"   v-for="model in AllPairing" v-bind:key="model.id">
-          <div class="imgen-r">
-            <img class="img-size" src="https://www.netgear.es/images/support/networking/Orbi/RBK12-Hero-Transparent.png" alt="">
-          </div>
-          <div class="footer-card">
-            <h4>{{model.model}}</h4>
-          </div>
-        </div>
-
-      </div>
+      <families></families>           
     </div>
   </div>
 </template>
@@ -34,30 +16,50 @@
   import XmlNavigation from '@/components/module_menus/XmlNavigation.vue'
   import MenuNavigation from '@/components/module_menus/MenuNavigation.vue'
   import ModelsNavigation from '@/components/module_menus/ModelsNavigation.vue'
-  
+
+  // Families:
+  import families from '@/components/module_families/Families.vue'
+
   import {
     mapState,
     mapActions,
     mapGetters
   } from "vuex";
-  
+
   export default {
     name: 'dashboard',
     components: {
       UserNavigation,
       XmlNavigation,
       MenuNavigation,
-      ModelsNavigation
-
+      ModelsNavigation,
+      families      
     },
-     computed: {
+    data() {
+      return {
+       page: 1,
+       size: 6,
+       pageLength: 3
+      }
+    },
+    computed: {
       ...mapState({
-        AllPairing: "AllPairing"
-      })
+        FamiliaDatos: "FamiliaDatos",
+        MODEL_Navi_opt: "MODEL_Navi_opt"
+      }),
+      pages() {
+        var size = this.size, page = this.page;
+         var cards =  this.FamiliaDatos.map((x, i) => i % size == 0 && this.FamiliaDatos.slice(i, i + size)).filter(x => x)
+         return cards[page-1];
+      },
+     
     },
+    created(){
+        this.$store.dispatch('actualizarFamilias','PAIRING');
+    }
   }
 </script>
 <style scope>
   @import "../assets/css/global.css";
-   @import "../assets/css/xmlConfiguration.css";
+
 </style>

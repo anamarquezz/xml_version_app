@@ -1,0 +1,36 @@
+.web .content{
+    display: grid;   
+    grid-template-areas: 
+        "⭐ ⚡ 🌵"      
+        "⭐ 🌳 ☀️" 
+        "⭐ 🌳 ✨";   
+        width: 100vw;
+        height: 90vh;      
+        margin: 0;
+        padding: 0;         
+}
+
+.web .test{
+    grid-area:⭐;
+    background: rgb(113, 173, 230);    
+}
+.web .box-models{
+    grid-area:⚡;    
+    background: rgb(113, 230, 224);  
+}
+.web .box-config-methods{
+    grid-area:🌳;    
+    background: rgb(168, 113, 230);  
+}
+.web .box-generate{
+    grid-area:🌵;    
+    background: rgb(230, 207, 113);  
+}
+.web .box-xml{
+    grid-area:☀️;    
+    background: rgb(252, 164, 208);  
+}
+.web .box-actions{
+    grid-area:✨;    
+    background: rgb(194, 99, 194);  
+}

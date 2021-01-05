@@ -57,7 +57,8 @@
         },
         set(newValue) {
          this.$store.commit("set_value", {name:'MODEL_Navi_opt',value:newValue});
-          //this.$router.push(newValue);
+         this.$store.dispatch('actualizarFamilias',newValue);
+         //this.$router.push(newValue);
         }
       },
     },

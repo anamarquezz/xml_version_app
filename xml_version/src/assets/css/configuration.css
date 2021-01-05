@@ -1,0 +1,92 @@
+.web .content{
+    display: grid;   
+    grid-template-areas: 
+        "⭐ ⚡ 🌵"      
+        "⭐ 🌳 ☀️" 
+        "⭐ 🌳 ✨";   
+        width: 100vw;
+        height: 83vh;      
+        margin: 0;
+        padding: 0;      
+        grid-template-columns: .1fr .4fr .5fr;
+        grid-template-rows: 10vh 63vh;    
+}
+
+.web .test{
+    grid-area:⭐;
+    /*background: rgb(214, 233, 250);     */
+    display: flex;    
+    flex-direction: column;  
+    padding: 2rem;    
+}
+
+.web .test .box-pairing, .box-pot{
+   flex:1 1;
+   display: flex;
+   margin:.5rem;
+   box-shadow: 4px 5px #413f3f;   
+   justify-content: center;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   font-size: 1.2rem;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.web .test .box-pairing:hover, .web .test .box-pot:hover{
+    background-color: #232e8a;
+ }
+
+.web .test .box-pairing{
+    background: #525DBD;
+}
+
+.web .test .box-pot{
+    background: #525DBD;
+}
+
+.web .box-models{
+    grid-area:⚡;    
+    /*background: rgb(197, 252, 249);  */
+    display: flex;    
+    flex-direction: row;  
+    padding: 1rem;    
+}
+
+.web .box-models .box-model1, .box-model2{   
+    display: flex;
+    margin:.5rem;
+    box-shadow: 4px 5px #413f3f;   
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #525DBD;
+    width: 10rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    
+ }
+
+ .web .box-models .box-model1:hover,  .web .box-models .box-model2:hover{
+    background-color: #232e8a;
+ }
+.web .box-config-methods{
+    grid-area:🌳;    
+    background: rgb(221, 202, 242);  
+}
+.web .box-generate{
+    grid-area:🌵;    
+    background: rgb(248, 243, 220);  
+}
+.web .box-xml{
+    grid-area:☀️;    
+    background: rgb(242, 211, 226);  
+}
+.web .box-actions{
+    grid-area:✨;    
+    background: rgb(209, 162, 209);  
+}

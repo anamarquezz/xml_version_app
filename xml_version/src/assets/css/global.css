@@ -49,6 +49,7 @@
 .center-info{
     grid-area:🦊;  
     display: grid;
-    grid-template-rows: 5rem auto;
-    width: 70vw;
+    grid-template-rows: 5rem auto; 
+    margin:.5rem;
+  
 }
