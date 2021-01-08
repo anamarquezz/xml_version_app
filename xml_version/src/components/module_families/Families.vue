@@ -1,15 +1,18 @@
 <template>
   <div v-resize="onResize">
-    
+
     <div class="icons-search">
-      <div class="txt-title"><h4>{{FamiliaDatos.title}}</h4></div>
+      <div class="txt-title">
+        <h4>{{FamiliaDatos.title}}</h4>
+      </div>
       <div class="text-center">
         <v-pagination :length="pageLength" v-model="page"></v-pagination>
       </div>
     </div>
 
     <div class="cards-routers">
-      <div class="cards" :class="FamiliaDatos.background" v-for="model in pages" v-bind:key="model.id">
+      <div class="cards" :class="FamiliaDatos.background" v-for="model in pages" v-bind:key="model.id"
+        @click="clickmodel(model)">
         <div class="imgen-r">
           <img class="img-size" src="https://www.netgear.es/images/support/networking/Orbi/RBK12-Hero-Transparent.png"
             alt="">
@@ -44,13 +47,15 @@
     },
     computed: {
       ...mapState({
-        FamiliaDatos: "FamiliaDatos"
+        FamiliaDatos: "FamiliaDatos",
+        option_xmlconfiguration:""       
       }),
       ...mapGetters([""]),
       pages() {
         var size = this.size,
           page = this.page;
-        var cards = this.FamiliaDatos.models.map((x, i) => i % size == 0 && this.FamiliaDatos.models.slice(i, i + size)).filter(x => x)
+        var cards = this.FamiliaDatos.models.map((x, i) => i % size == 0 && this.FamiliaDatos.models.slice(i, i + size))
+          .filter(x => x)
         return cards[page - 1];
       }
     },
@@ -58,6 +63,9 @@
       onResize() {
         if (window.innerWidth < 600) this.isMobile = true;
         else this.isMobile = false;
+      },
+      clickmodel(model) {
+        this.$store.dispatch('actualizar_optionXML', {option:'families',modelChilds:models, nameModel: models.model});
       }
     }
   }

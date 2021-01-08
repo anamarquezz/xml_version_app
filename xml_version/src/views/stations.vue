@@ -5,7 +5,7 @@
     <div class="menu-navigation"></div>
     <div class="model-navigation">🐢</div>
     <div class="center-info">
-      <configuration></configuration>
+     
     </div>
   </div>
 </template>
@@ -16,15 +16,12 @@
   import XmlNavigation from '@/components/module_menus/XmlNavigation.vue'
 
   
-  import configuration from '@/components/module_families/configuration.vue'
-
-
   export default {
     name: 'dashboard',
       components: {
       UserNavigation,
       XmlNavigation,
-     configuration
+
     
     }
   }

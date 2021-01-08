@@ -3,9 +3,8 @@
     grid-template-areas: 
         "⭐ ⚡ 🌵"      
         "⭐ 🌳 ☀️" 
-        "⭐ 🌳 ✨";   
-        width: 100vw;
-        height: 83vh;      
+        "⭐ 🌳 ✨";           
+        height: 80vh;      
         margin: 0;
         padding: 0;      
         grid-template-columns: .1fr .4fr .5fr;
@@ -17,15 +16,14 @@
     /*background: rgb(214, 233, 250);     */
     display: flex;    
     flex-direction: column;  
-    padding: 2rem;    
+    padding: 1.5rem;    
 }
 
 .web .test .box-pairing, .box-pot{
    flex:1 1;
    display: flex;
    margin:.5rem;
-   box-shadow: 4px 5px #413f3f;   
-   justify-content: center;
+   box-shadow: 4px 5px #413f3f;     
    align-items: center;
    justify-content: center;
    color: white;
@@ -34,8 +32,11 @@
    cursor: pointer;
 }
 
+
+
 .web .test .box-pairing:hover, .web .test .box-pot:hover{
     background-color: #232e8a;
+    transform: scale(0.98);
  }
 
 .web .test .box-pairing{
@@ -51,41 +52,76 @@
     /*background: rgb(197, 252, 249);  */
     display: flex;    
     flex-direction: row;  
-    padding: 1rem;    
+    padding-top: 1.5rem;  
 }
 
-.web .box-models .box-model1, .box-model2{   
-    display: flex;
-    margin:.5rem;
-    box-shadow: 4px 5px #413f3f;   
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    background: #525DBD;
-    width: 10rem;
-    border-radius: .5rem;
-    cursor: pointer;
-    
- }
+.b-models{
+    margin:.2rem;
+    font-size: 15px;
+}
 
- .web .box-models .box-model1:hover,  .web .box-models .box-model2:hover{
-    background-color: #232e8a;
- }
 .web .box-config-methods{
-    grid-area:🌳;    
-    background: rgb(221, 202, 242);  
+    grid-area:🌳;        
+    margin:0 2rem 0 0rem;
+    box-shadow: 1px 2px 8px 2px #7e7e7e;  
+    display: grid;   
+    grid-template-areas:  
+        "⚽ ⚽ "      
+        "⚾ 🏀 " 
+        "🏐 🏐 ";    
+        grid-template-columns: 150px 1fr;            
+        grid-template-rows: 5rem 1fr 5rem;  
+        
 }
+
+
+
+
+.web  .box-config-methods .box-config-top{
+    grid-area:⚽;    
+    margin: .5rem; 
+    background: #E6E8F4;
+    display: flex;
+    align-items: center;    
+   
+}
+
+.web  .box-config-methods .box-c{
+    flex: 1 1 1 1;
+    margin:1rem;
+}
+
+.web  .box-config-methods .box-config-left{
+    grid-area:⚾;   
+    margin: .5rem;  
+    align-content: center;  
+}
+
+
+
+.web .box-config-methods .box-config-right{
+    grid-area:🏀; 
+    margin: .5rem;
+    background: #E6E8F4;
+}
+
+.web .box-config-bottom{
+    grid-area:🏐;      
+    margin: .5rem; 
+    text-align: right;
+}
+
+
 .web .box-generate{
     grid-area:🌵;    
     background: rgb(248, 243, 220);  
 }
+
 .web .box-xml{
     grid-area:☀️;    
     background: rgb(242, 211, 226);  
 }
+
 .web .box-actions{
     grid-area:✨;    
     background: rgb(209, 162, 209);  

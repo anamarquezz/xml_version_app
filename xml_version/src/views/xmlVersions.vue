@@ -20,7 +20,8 @@
      components: {
       UserNavigation,
       XmlNavigation,
-      MenuNavigation   
+      MenuNavigation
+  
     }
   }
 </script>

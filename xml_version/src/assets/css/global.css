@@ -50,6 +50,11 @@
     grid-area:🦊;  
     display: grid;
     grid-template-rows: 5rem auto; 
-    margin:.5rem;
-  
+    margin:.5rem;  
 }
+
+
+size-combo{
+    width: 10rem !important;
+}
+

@@ -11,6 +11,12 @@ export default new Vuex.Store({
     MODEL_Navi_opt: 'PAIRING',
     /* {PAIRING, ROUTERS, CABLE, CABLE-MODEMS} */
     MENU_Nav_opt: [] /* menu dependiendo del menu MODEL_Navi_opt */ ,
+    option_xmlconfiguration:{
+      option:'configuration',
+      modelChilds:'',
+      nameModel:''     
+    },
+
     PAIRING: {
       background: 'light-blue darken-3',
       title: 'PAIRING',
@@ -385,19 +391,31 @@ export default new Vuex.Store({
     },
     set_valueStore: (state, prop) => {
       state[prop.name] = state[prop.value];
+    },
+    set_valueswith: (state, prop) => {
+      option_xmlconfiguration.option = prop.option,
+      option_xmlconfiguration.modelChilds = prop.modelChilds,
+      option_xmlconfiguration.nameModel = prop.nameModel
     }
   },
   actions: {
-    actualizarFamilias({
-      state,
-      commit,
-      dispatch
+    actualizarFamilias({      
+      commit      
     }, familia) {
       commit('set_valueStore', {
         name: 'FamiliaDatos',
         value: familia
       });
     },
+    actualizar_optionXML({      
+      commit      
+    }, values) {
+      commit('set_valueswith', {
+        option:values.option,
+        modelChilds: values.modelChilds,
+        nameModel: values.nameModel
+      });
+    }
   },
   modules: {}
 })

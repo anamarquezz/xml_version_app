@@ -5,7 +5,8 @@
     <MenuNavigation class="menu-navigation"></MenuNavigation>
     <ModelsNavigation class="model-navigation"></ModelsNavigation>
     <div class="center-info">
-      <families></families>           
+      <families v-if="option_xmlconfiguration.option=='families'"></families>
+      <configuration v-if="option_xmlconfiguration.option=='configuration'"></configuration>
     </div>
   </div>
 </template>
@@ -19,6 +20,8 @@
 
   // Families:
   import families from '@/components/module_families/Families.vue'
+  import configuration from '@/components/module_families/configuration.vue'
+
 
   import {
     mapState,
@@ -33,33 +36,36 @@
       XmlNavigation,
       MenuNavigation,
       ModelsNavigation,
-      families      
+      families,
+      configuration
     },
     data() {
       return {
-       page: 1,
-       size: 6,
-       pageLength: 3
+        page: 1,
+        size: 6,
+        pageLength: 3
       }
     },
     computed: {
       ...mapState({
         FamiliaDatos: "FamiliaDatos",
-        MODEL_Navi_opt: "MODEL_Navi_opt"
+        MODEL_Navi_opt: "MODEL_Navi_opt",
+        option_xmlconfiguration:"option_xmlconfiguration"      
       }),
       pages() {
-        var size = this.size, page = this.page;
-         var cards =  this.FamiliaDatos.map((x, i) => i % size == 0 && this.FamiliaDatos.slice(i, i + size)).filter(x => x)
-         return cards[page-1];
+        var size = this.size,
+          page = this.page;
+        var cards = this.FamiliaDatos.map((x, i) => i % size == 0 && this.FamiliaDatos.slice(i, i + size)).filter(x =>
+          x)
+        return cards[page - 1];
       },
-     
+
     },
-    created(){
-        this.$store.dispatch('actualizarFamilias','PAIRING');
+    created() {
+      this.$store.dispatch('actualizarFamilias', 'PAIRING');
     }
   }
 </script>
 <style scope>
   @import "../assets/css/global.css";
-
 </style>
