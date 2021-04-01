@@ -1,9 +1,7 @@
 <template>
   <div v-resize="onResize">
-    <nav>
-      <v-app-bar color="#4A51A6" dense dark>
-
-        <v-app-bar-nav-icon v-if="isMobile"></v-app-bar-nav-icon>
+   
+      <v-app-bar class="" color="#F0F0F0" dense dark>     
 
         <v-spacer></v-spacer>
 
@@ -25,7 +23,7 @@
         </v-btn>
 
       </v-app-bar>
-    </nav>
+    
   </div>
 
 
@@ -65,13 +63,17 @@ import { mapState, mapActions, mapGetters } from "vuex";
     }
 </script>
 <style scoped>
-  @import "../../assets/css/navigations.css";
+
 
   .NoPressed {
-    color: white;
+    color: black !important;
   }
 
   .pressed {
-    color: #63DF0F !important;
+    color: #652D8D  !important;
+     border-bottom: 5px solid #652D8D;
+    background-color:transparent;
   }
+
+
 </style>

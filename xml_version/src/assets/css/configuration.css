@@ -1,14 +1,15 @@
 .web .content{
     display: grid;   
     grid-template-areas: 
+        "🤖 🤖 🤖"
         "⭐ ⚡ 🌵"      
         "⭐ 🌳 ☀️" 
         "⭐ 🌳 ✨";           
         height: 80vh;      
         margin: 0;
         padding: 0;      
-        grid-template-columns: .1fr .4fr .5fr;
-        grid-template-rows: 10vh 63vh;    
+        grid-template-columns: 150px 1fr 1fr;
+        grid-template-rows: 10vh 10vh 63vh;    
 }
 
 .web .test{
@@ -16,35 +17,58 @@
     /*background: rgb(214, 233, 250);     */
     display: flex;    
     flex-direction: column;  
-    padding: 1.5rem;    
+    padding: 1.5rem;  
 }
 
-.web .test .box-pairing, .box-pot{
-   flex:1 1;
-   display: flex;
-   margin:.5rem;
-   box-shadow: 4px 5px #413f3f;     
-   align-items: center;
-   justify-content: center;
-   color: white;
-   font-size: 1.2rem;
-   font-weight: bold;
-   cursor: pointer;
+.web .header-title{  
+    grid-area: 🤖;     
+    margin: .5rem;
+    border-radius: 1rem;
+}
+
+.web .header-title .subtitles{
+    width: 10%;
+    text-align: center;
+}
+
+.web .header-title .titles{   
+    width: 80%; 
+    text-align: center;
+    font-size: 2.5rem;
+    color:var(--primary);
+    font-weight: bold;
+}
+
+.web .header-title .box-title{
+    background-color: var(--neutralLight);
+    width: 85vw;
+    height: 8vh;
+    margin-top: .4rem;
+    border-radius: 1rem;
+    display: flex;    
+    flex: 250px 1;
+    align-items:center;
+    justify-content: flex-start;
+}
+.web .content .v-btn-toggle > .v-btn.v-btn--active {
+    color: white;
+    opacity: 1;
+    background: var(--primary) !important;
+}
+
+.web .content  .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+    background-color:var(--secondaryLight);
+    color: white;
 }
 
 
-
-.web .test .box-pairing:hover, .web .test .box-pot:hover{
-    background-color: #232e8a;
-    transform: scale(0.98);
- }
-
-.web .test .box-pairing{
-    background: #525DBD;
+.web .test .option-test{
+    display: flex;    
+    flex-direction: column;  
 }
-
-.web .test .box-pot{
-    background: #525DBD;
+.web .test .option-test  .v-btn.v-btn.v-size--default{
+    height: 38vh;
+    margin:.2rem;
 }
 
 .web .box-models{
@@ -62,7 +86,7 @@
 
 .web .box-config-methods{
     grid-area:🌳;        
-    margin:0 2rem 0 0rem;
+    margin:.3em 2rem 0 0rem;
     box-shadow: 1px 2px 8px 2px #7e7e7e;  
     display: grid;   
     grid-template-areas:  
@@ -81,20 +105,36 @@
     grid-area:⚽;    
     margin: .5rem; 
     background: #E6E8F4;
-    display: flex;
-    align-items: center;    
-   
+    display: flex;     
+}  
+
+
+.v-btn:not(.v-btn--round).v-size--large {
+	height: 44px;
+	min-width: 126px;
+	padding: 0 19.5555555556px;
 }
 
-.web  .box-config-methods .box-c{
-    flex: 1 1 1 1;
-    margin:1rem;
+
+.box-config-top{
+    justify-content: space-evenly;
+}
+
+.web  .box-config-methods .box-c{     
+   
+    margin: 5px;
 }
 
 .web  .box-config-methods .box-config-left{
     grid-area:⚾;   
     margin: .5rem;  
     align-content: center;  
+}
+
+.box-config-left{
+    display: flex;    
+    flex-direction: row;  
+    padding-top: 1.5rem;
 }
 
 

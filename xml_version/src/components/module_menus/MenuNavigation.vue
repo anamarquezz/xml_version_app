@@ -71,20 +71,8 @@
   }
 </script>
 <style scoped>
-  @import "../../assets/css/navigations.css";
+  @import "../../assets/css/menuNavigation.css";
 
-  .NoPressed {
-    color: black;
-  }
+ 
 
-  .pressed {
-    color: black !important;
-    border-bottom: 5px solid #707AFF;
-    background-color:#D7DAFF;
-  }
-
-  .alignitemsss {
-    display: flex;
-    flex-direction: center;
-  }
 </style>

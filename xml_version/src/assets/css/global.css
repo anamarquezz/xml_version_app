@@ -3,6 +3,22 @@
     padding: 0;   
 }
 
+:root {
+    --primary-white-color: #F0F0F0;
+    --primary:#662D8D;
+    --primaryLight:rgb(215,80,22,54%); 
+    --primaryDark:#471468;
+
+    --secondary:#4F4F4F;
+    --secondaryLight:#413f3f;
+    --secondaryDark:#080808;
+
+   
+    --neutralLight:#E6E6E6;
+
+  }
+
+
 .dashboard{
     display: grid;   
     grid-template-areas: 
@@ -18,7 +34,9 @@
 
 .user-navigation{
     grid-area:😺;  
-    background-color: #020468; 
+    background-color: #4F4F4F; 
+    position: fixed;
+    width:100% ;
 }
 
 .user-info .circle{
@@ -31,12 +49,11 @@
 
 .xml-navigation{
     grid-area:🦄;
-    background-color: #4A51A6;
+    background-color: #F0F0F0;
 }
 
 .menu-navigation{
-    grid-area:🐷;
-    background-color: rgb(254, 221, 255);   
+    grid-area:🐷;   
     border:1px solid rgb(200, 200, 200); 
 }
 

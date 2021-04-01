@@ -11,10 +11,10 @@ export default new Vuex.Store({
     MODEL_Navi_opt: 'PAIRING',
     /* {PAIRING, ROUTERS, CABLE, CABLE-MODEMS} */
     MENU_Nav_opt: [] /* menu dependiendo del menu MODEL_Navi_opt */ ,
-    option_xmlconfiguration:{
-      option:'configuration',
-      modelChilds:'',
-      nameModel:''     
+    option_xmlconfiguration: {
+      option: 'configuration',
+      modelChilds: '',
+      nameModel: ''
     },
 
     PAIRING: {
@@ -340,9 +340,10 @@ export default new Vuex.Store({
           model: 'CABLE7',
           ispairign: true
         }
-      ]
+      ],
+      methods: [{}]
     },
-    CABLEMODEMS:{
+    CABLEMODEMS: {
       background: 'light-blue darken-3',
       title: 'CABLE MODEMS',
       models: [{
@@ -383,7 +384,133 @@ export default new Vuex.Store({
         }
       ]
     },
-    FamiliaDatos: ''
+    FamiliaDatos: '',
+    AccessType: [{
+        value: 1,
+        text: 'telnet'
+      },
+      {
+        value: 2,
+        text: 'smtp'
+      },
+      {
+        value: 3,
+        text: 'soap'
+      }
+    ],
+    methods: [{
+        id: 1,
+        name: 'C TBS',
+        description: 'config_TBSwitch',
+        params: {
+          addrs: '192.168.2.102'
+        }
+      },
+      {
+        id: 2,
+        name: 'Init',
+        description: 'initSkuMgmt'
+      },
+      {
+        id: 3,
+        name: 'S OD',
+        description: 'switchOnDut',
+        params: {
+          ping: true,
+          bootup_time: '',
+          num_tries: ''
+        },
+
+      },
+      {
+        id: 4,
+        name: 'P TS',
+        description: 'pauseTestSequence',
+        params: {
+          msg: ' waiting for the DUT boot up',
+          pause_time: 15
+        }
+      },
+      {
+        id: 5,
+        name: 'I SAI',
+        description: 'initSkuAccessIntf',
+        params: {
+          access_type: 'telnet',
+          timeout: 10,
+          num_tries: 20
+        },
+
+      },
+      {
+        id: 6,
+        name: 's IAT',
+        description: 'skuIntfAccessTest',
+        params: {
+          msg: ' waiting for the DUT boot up',
+          pause_time: 15
+        }
+      }, {
+        id: 7,
+        name: 'G FhSSID',
+        description: 'getFronthaulSSID',
+        params: {
+          access_type: 'telnet',
+          source: 'gui',
+          fronthaul_ssid_cmd: 'input',
+          fronthaul_ssid_pattern: 'input',
+          num_tries: 3
+        }
+      },
+      {
+        id: 8,
+        name: 'G FhPWD',
+        description: 'getFronthaulPWD',
+        params: {
+          access_type: 'telnet',
+          fronthaul_pwd_cmd: 'input',
+          fronthaul_pwd_pattern: 'input',
+          source: 'gui',
+          num_tries: 3
+        },
+      },
+      {
+        id: 9,
+        name: 'G BhSSSID',
+        description: 'getBackhaulSSID',
+        params: {
+          access_type: 'telnet',
+          source: 'dut',
+          backhaul_ssid_cmd: 'input',
+          backhaul_ssid_pattern: 'input',
+          num_tries: 3
+        }
+      },
+      {
+        id: 10,
+        name: 'G BhPWD',
+        description: 'getBackhaulPWD',
+        params: {
+          access_type: 'telnet',
+          source: 'dut',
+          backhaul_pwd_cmd: 'input',
+          backhaul_pwd_pattern: 'input',
+          num_tries: 3
+        }
+      },
+      {
+        id: 11,
+        name: 'G BhPWD',
+        description: 'getBackhaulPWD',
+        params: {
+          access_type: 'telnet',
+          source: 'dut',
+          backhaul_pwd_cmd: 'input',
+          backhaul_pwd_pattern: 'input',
+          num_tries: 3
+        }
+      }
+    ]
   },
   mutations: {
     set_value: (state, prop) => {
@@ -394,24 +521,24 @@ export default new Vuex.Store({
     },
     set_valueswith: (state, prop) => {
       option_xmlconfiguration.option = prop.option,
-      option_xmlconfiguration.modelChilds = prop.modelChilds,
-      option_xmlconfiguration.nameModel = prop.nameModel
+        option_xmlconfiguration.modelChilds = prop.modelChilds,
+        option_xmlconfiguration.nameModel = prop.nameModel
     }
   },
   actions: {
-    actualizarFamilias({      
-      commit      
+    actualizarFamilias({
+      commit
     }, familia) {
       commit('set_valueStore', {
         name: 'FamiliaDatos',
         value: familia
       });
     },
-    actualizar_optionXML({      
-      commit      
+    actualizar_optionXML({
+      commit
     }, values) {
       commit('set_valueswith', {
-        option:values.option,
+        option: values.option,
         modelChilds: values.modelChilds,
         nameModel: values.nameModel
       });

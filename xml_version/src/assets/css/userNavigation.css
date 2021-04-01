@@ -1,0 +1,35 @@
+.first-bar{
+    display: inline-flex;    
+    justify-content: space-between;
+    color: white; 
+}
+
+.first-bar .company{
+      width: 20rem;  
+      margin:.5rem 0 0 2rem;  
+}
+
+.menu a{
+    color: white;
+}
+
+.user-info{
+    text-align: center;
+    display: flex;
+    justify-content:space-evenly;
+    width: 260px;
+    align-items: center;
+
+}
+.user-icon{
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 10rem;
+    margin-right: 3rem; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+   
+}

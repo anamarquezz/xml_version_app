@@ -1,0 +1,13 @@
+
+  .NoPressed {
+    color: black !important;
+  }
+  .pressed {
+    border-bottom: 5px solid var(--secondaryDark);
+    background-color:var(--secondaryLight);
+  }
+
+  .alignitemsss {
+    display: flex;
+    flex-direction: center;
+  }
