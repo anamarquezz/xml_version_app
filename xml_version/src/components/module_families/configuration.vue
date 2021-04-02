@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div class="box-config-left">
-                        <v-btn-toggle v-model="toggle_exclusiveRouter" class="option-test d-block"
+                        <v-btn-toggle v-model="toggle_exclusiveMethod" class="option-test d-block"
                             color="var(--primary)">
 
                             <v-tooltip top v-for="method in methods" v-bind:key="method.id">
@@ -96,6 +96,7 @@
                 selectAccesType: '',
                 toggle_exclusiveTest: 0,
                 toggle_exclusiveRouter: 0,
+                toggle_exclusiveMethod:0
             };
         },
         computed: {
