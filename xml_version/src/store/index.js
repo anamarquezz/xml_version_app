@@ -10,7 +10,8 @@ export default new Vuex.Store({
     /* {DASHBOARD, XML-CONFIGURATION, STATIONS, XML-VERSIONS} */
     MODEL_Navi_opt: 'PAIRING',
     /* {PAIRING, ROUTERS, CABLE, CABLE-MODEMS} */
-    MENU_Nav_opt: [] /* menu dependiendo del menu MODEL_Navi_opt */ ,
+    MENU_Nav_opt: [], /* menu dependiendo del menu MODEL_Navi_opt */ 
+    xml_selected:'', /* Selected xml */
     option_xmlconfiguration: {
       option: 'configuration',
       modelChilds: '',
@@ -28,25 +29,25 @@ export default new Vuex.Store({
             id: 1,
             model: 'RBR10v1',
             suitesxml: [{
-                id: 1,
-                name: 'pairing.xml'
+                idxml: 1,
+                name: 'pairing'
               },
               {
-                id: 2,
-                name: 'pot_reset.xml'
+                idxml: 2,
+                name: 'pot_reset'
               }
             ]
           }, {
             id: 2,
             model: 'RBS10v1',
             suitesxml: [{
-                id: 1,
-                name: 'pairing.xml'
-              },
-              {
-                id: 2,
-                name: 'pot_reset.xml'
-              }
+              idxml: 1,
+              name: 'pairing'
+            },
+            {
+              idxml: 2,
+              name: 'pot_reset'
+            }
             ]
           }]
         },
@@ -58,38 +59,38 @@ export default new Vuex.Store({
               id: 1,
               model: 'RBR10v1',
               suitesxml: [{
-                  id: 1,
-                  name: 'pairing.xml'
-                },
-                {
-                  id: 2,
-                  name: 'pot_reset.xml'
-                }
+                idxml: 1,
+                name: 'pairing'
+              },
+              {
+                idxml: 2,
+                name: 'pot_reset'
+              }
               ]
             }, {
               id: 2,
               model: 'RBS10v1-1',
               suitesxml: [{
-                  id: 1,
-                  name: 'pairing.xml'
-                },
-                {
-                  id: 2,
-                  name: 'pot_reset.xml'
-                }
+                idxml: 1,
+                name: 'pairing'
+              },
+              {
+                idxml: 2,
+                name: 'pot_reset'
+              }
               ]
             },
             {
               id: 3,
               model: 'RBS10v1-2',
               suitesxml: [{
-                  id: 1,
-                  name: 'pairing.xml'
-                },
-                {
-                  id: 2,
-                  name: 'pot_reset.xml'
-                }
+                idxml: 1,
+                name: 'pairing'
+              },
+              {
+                idxml: 2,
+                name: 'pot_reset'
+              }
               ]
             }
           ]
@@ -102,25 +103,25 @@ export default new Vuex.Store({
             id: 6,
             model: 'RBR20v1',
             suitesxml: [{
-                id: 1,
-                name: 'pairing.xml'
-              },
-              {
-                id: 2,
-                name: 'pot_reset.xml'
-              }
+              idxml: 1,
+              name: 'pairing'
+            },
+            {
+              idxml: 2,
+              name: 'pot_reset'
+            }
             ]
           }, {
             id: 7,
             model: 'RBS20v1',
             suitesxml: [{
-                id: 1,
-                name: 'pairing.xml'
-              },
-              {
-                id: 2,
-                name: 'pot_reset.xml'
-              }
+              idxml: 1,
+              name: 'pairing'
+            },
+            {
+              idxml: 2,
+              name: 'pot_reset'
+            }
             ]
           }]
         },
@@ -132,25 +133,25 @@ export default new Vuex.Store({
             id: 8,
             model: 'RBR750v1',
             suitesxml: [{
-                id: 1,
-                name: 'pairing.xml'
-              },
-              {
-                id: 2,
-                name: 'pot_reset.xml'
-              }
+              idxml: 1,
+              name: 'pairing'
+            },
+            {
+              idxml: 2,
+              name: 'pot_reset'
+            }
             ]
           }, {
             id: 9,
             model: 'RBS750v1',
             suitesxml: [{
-                id: 1,
-                name: 'pairing.xml'
-              },
-              {
-                id: 2,
-                name: 'pot_reset.xml'
-              }
+              idxml: 1,
+              name: 'pairing'
+            },
+            {
+              idxml: 2,
+              name: 'pot_reset'
+            }
             ]
           }]
         },
@@ -162,25 +163,25 @@ export default new Vuex.Store({
             id: 10,
             model: 'RBR850v1',
             suitesxml: [{
-                id: 1,
-                name: 'pairing.xml'
-              },
-              {
-                id: 2,
-                name: 'pot_reset.xml'
-              }
+              idxml: 1,
+              name: 'pairing'
+            },
+            {
+              idxml: 2,
+              name: 'pot_reset'
+            }
             ]
           }, {
             id: 11,
             model: 'RBS850v1',
             suitesxml: [{
-                id: 1,
-                name: 'pairing.xml'
-              },
-              {
-                id: 2,
-                name: 'pot_reset.xml'
-              }
+              idxml: 1,
+              name: 'pairing'
+            },
+            {
+              idxml: 2,
+              name: 'pot_reset'
+            }
             ]
           }]
         },
@@ -192,25 +193,25 @@ export default new Vuex.Store({
             id: 12,
             model: 'MR60V1',
             suitesxml: [{
-                id: 1,
-                name: 'pairing.xml'
-              },
-              {
-                id: 2,
-                name: 'pot_reset.xml'
-              }
+              idxml: 1,
+              name: 'pairing'
+            },
+            {
+              idxml: 2,
+              name: 'pot_reset'
+            }
             ]
           }, {
             id: 13,
             model: 'MS60v1-1',
             suitesxml: [{
-                id: 1,
-                name: 'pairing.xml'
-              },
-              {
-                id: 2,
-                name: 'pot_reset.xml'
-              }
+              idxml: 1,
+              name: 'pairing'
+            },
+            {
+              idxml: 2,
+              name: 'pot_reset'
+            }
             ]
           }, ]
         },
@@ -222,38 +223,38 @@ export default new Vuex.Store({
               id: 12,
               model: 'MR60V1',
               suitesxml: [{
-                  id: 1,
-                  name: 'pairing.xml'
-                },
-                {
-                  id: 2,
-                  name: 'pot_reset.xml'
-                }
+                idxml: 1,
+                name: 'pairing'
+              },
+              {
+                idxml: 2,
+                name: 'pot_reset'
+              }
               ]
             }, {
               id: 13,
               model: 'MS60v1-1',
               suitesxml: [{
-                  id: 1,
-                  name: 'pairing.xml'
-                },
-                {
-                  id: 2,
-                  name: 'pot_reset.xml'
-                }
+                idxml: 1,
+                name: 'pairing'
+              },
+              {
+                idxml: 2,
+                name: 'pot_reset'
+              }
               ]
             },
             {
               id: 14,
               model: 'MS60v1-2',
               suitesxml: [{
-                  id: 1,
-                  name: 'pairing.xml'
-                },
-                {
-                  id: 2,
-                  name: 'pot_reset.xml'
-                }
+                idxml: 1,
+                name: 'pairing'
+              },
+              {
+                idxml: 2,
+                name: 'pot_reset'
+              }
               ]
             }
           ]
@@ -341,7 +342,7 @@ export default new Vuex.Store({
           ispairign: true
         }
       ],
-      methods: [{}]
+      methods: []
     },
     CABLEMODEMS: {
       background: 'light-blue darken-3',
@@ -400,117 +401,427 @@ export default new Vuex.Store({
     ],
     methods: [{
         id: 1,
-        name: 'C TBS',
-        description: 'config_TBSwitch',
-        params: {
-          addrs: '192.168.2.102'
-        }
+        modelid:1,
+        idxml:1,
+        name: 'config_TBSwitch',
+        description: 'CFG TBSWT',
+        title: 'config TB Switch',
+        sequenceTries: 0,
+        component: '',
+        type: '',
+        execute_once: true,
+        hasParameters: true,
+        parameters: [{           
+            name: 'conf_script_file',
+            List: false,
+            component: 'textfield',
+            type: 'text',
+            value: 'ITS3_TESTBED_SW_CNFG_PAIRING_3'
+          },
+          {
+            name: 'addrs',
+            List: true,
+            values: [{
+              name:'IP',
+              value: '169.254.100.100',
+              component: 'textfield',
+              order: 5,
+              type: 'text'
+            },
+            {
+              name:'value',
+              value: '192.168.2.102',
+              component: 'textfield',
+              order: 4,
+              type: 'text'
+            },
+            {
+              name: 'bootup_time',
+              List: false,
+              component: 'textfield',
+              type: 'string',
+              order: 3,
+              value: 30
+            },
+            {
+              name: 'ping_tries',
+              List: false,
+              component: 'textfield',
+              type: 'string',
+              order: 2,
+              value: 60
+            },
+            {
+              name: 'num_tries',
+              List: false,
+              component: 'textfield',
+              type: 'string',
+              order: 1,
+              value: 20
+            }]
+          }
+        ]
       },
       {
         id: 2,
-        name: 'Init',
-        description: 'initSkuMgmt'
+        name: 'switchOffAllDuts',
+        description: 'OFF ALLDUTS',
+        title: 'Switch Off All Duts',
+        sequenceTries: 0,
+        component: '',
+        type: '',
+        execute_once: true,
+        hasParameter: false,
+        parameters: []
       },
       {
         id: 3,
-        name: 'S OD',
-        description: 'switchOnDut',
-        params: {
-          ping: true,
-          bootup_time: '',
-          num_tries: ''
-        },
-
+        name: 'initSkuMgmt',
+        description: 'Init',
+        title: 'initSkuMgmt',
+        sequenceTries: 0,
+        component: '',
+        type: '',
+        execute_once: false,
+        hasParameter: false,
+        parameters: []
       },
       {
         id: 4,
-        name: 'P TS',
-        description: 'pauseTestSequence',
-        params: {
-          msg: ' waiting for the DUT boot up',
-          pause_time: 15
-        }
+        name: 'switchOnDut',
+        description: 'ON ALL DUTS',
+        title: 'Switch On Dut',
+        sequenceTries: 0,
+        component: '',
+        type: '',
+        execute_once: false,
+        hasParameter: true,
+        parameters: [{
+            name: 'ping',
+            List: false,
+            component: 'radio',
+            type: 'string',
+            value: 1
+          },
+          {
+            name: 'bootup_time',
+            List: false,
+            component: 'textfield',
+            type: 'string',
+            value: 30
+          },
+          {
+            name: 'num_tries',
+            List: false,
+            component: 'textfield',
+            type: 'string',
+            value: 20
+          }
+        ]
       },
       {
         id: 5,
-        name: 'I SAI',
-        description: 'initSkuAccessIntf',
-        params: {
-          access_type: 'telnet',
-          timeout: 10,
-          num_tries: 20
-        },
-
+        name: 'initSkuAccessIntf',
+        description: 'Init Access',
+        title: 'Switch On Dut',
+        sequenceTries: 0,
+        execute_once: false,
+        hasParameter: true,
+        component: '',
+        type: '',
+        parameters: [{
+            name: 'access_type',
+            List: false,
+            component: 'combobox',
+            type: '',
+            value: 'telnet'
+          },
+          {
+            name: 'timeout',
+            List: false,
+            component: 'textfield',
+            type: 'string',
+            value: 10
+          },
+          {
+            name: 'num_tries',
+            List: false,
+            component: 'textfield',
+            type: 'string',
+            value: 20
+          }
+        ]
       },
       {
         id: 6,
-        name: 's IAT',
-        description: 'skuIntfAccessTest',
-        params: {
-          msg: ' waiting for the DUT boot up',
-          pause_time: 15
-        }
-      }, {
+        name: 'skuIntfAccessTest',
+        description: 'Init Access',
+        title: 'sku Intf Access Test',
+        sequenceTries: 0,
+        component: '',
+        type: '',
+        execute_once: false,
+        hasParameter: true,
+        parameters: [{
+            name: 'access_type',
+            List: false,
+            component: 'combobox',
+            type: '',
+            value: 'telnet'
+          },
+          {
+            name: 'fw_cmd',
+            List: false,
+            component: 'textfield',
+            type: 'string',
+            value: 'routerinfo'
+          },
+          {
+            name: 'fw_pattern',
+            List: false,
+            component: 'textfield',
+            type: 'string',
+            value: '/([V0-9._-]+)/'
+          },
+          {
+            name: 'num_tries',
+            List: false,
+            component: 'textfield',
+            type: 'string',
+            value: 3
+          }
+        ]
+      },
+      {
         id: 7,
-        name: 'G FhSSID',
-        description: 'getFronthaulSSID',
-        params: {
-          access_type: 'telnet',
-          source: 'gui',
-          fronthaul_ssid_cmd: 'input',
-          fronthaul_ssid_pattern: 'input',
-          num_tries: 3
-        }
+        name: 'fwTest',
+        description: 'FW Check',
+        title: 'FW Version Check',
+        sequenceTries: 0,
+        component: '',
+        type: '',
+        execute_once: false,
+        hasParameter: true,
+        parameters: [{
+            name: 'access_type',
+            List: false,
+            component: 'combobox',
+            type: '',
+            value: 'telnet'
+          },
+          {
+            name: 'fw',
+            List: false,
+            component: 'textfield',
+            type: 'string',
+            value: 'V1.0.6.102_2.0.45'
+          },
+          {
+            name: 'fw_cmd',
+            List: false,
+            component: 'textfield',
+            type: 'string',
+            value: 'routerinfo'
+          },
+          {
+            name: 'fw_pattern',
+            List: false,
+            component: 'textfield',
+            type: 'string',
+            value: '/([V0-9._-]+)/'
+          },
+          {
+            name: 'num_tries',
+            List: false,
+            component: 'textfield',
+            type: 'string',
+            value: 3
+          }
+        ]
       },
       {
         id: 8,
-        name: 'G FhPWD',
-        description: 'getFronthaulPWD',
-        params: {
-          access_type: 'telnet',
-          fronthaul_pwd_cmd: 'input',
-          fronthaul_pwd_pattern: 'input',
-          source: 'gui',
-          num_tries: 3
-        },
+        name: 'readOrbiInfo',
+        description: 'RD ORBINFO',
+        title: 'Read Orbi Info',
+        sequenceTries: 3,
+        component: '',
+        type: '',
+        execute_once: false,
+        hasParameter: true,
+        parameters: [{
+            name: 'access_type',
+            List: false,
+            component: 'combobox',
+            type: '',
+            value: 'telnet'
+          },
+          {
+            name: 'info_note',
+            List: false,
+            component: 'textfield',
+            type: 'string',
+            value: 'current_info'
+          },
+          {
+            name: 'info_names',
+            List: true,
+            values: [{
+                name: 'info_names',
+                component: 'textfield',
+                type: 'text',
+                order: 1,
+                value: 'SN'
+              },
+              {
+                name: 'read_info_cmds',
+                component: 'textfield',
+                type: 'text',
+                order: 2,
+                value: 'burnsn'
+              },
+              {
+                name: 'info_patterns',
+                component: 'textfield',
+                type: 'text',
+                order: 3,
+                value: 'serial number - ([a-zA-Z0-9]+)'
+              }
+            ]
+          }
+        ]
       },
       {
         id: 9,
-        name: 'G BhSSSID',
-        description: 'getBackhaulSSID',
-        params: {
-          access_type: 'telnet',
-          source: 'dut',
-          backhaul_ssid_cmd: 'input',
-          backhaul_ssid_pattern: 'input',
-          num_tries: 3
-        }
+        name: 'writeOrbiInfo',
+        description: 'WT ORBINFO',
+        title: 'Write Orbi Info',
+        sequenceTries: 0,
+        component: '',
+        type: '',
+        execute_once: false,
+        hasParameter: true,
+        parameters: [{
+            name: 'access_type',
+            List: false,
+            component: 'combobox',
+            type: '',
+            value: 'telnet'
+          },
+          {
+            name: 'cmds',
+            List: true,
+            values: [{
+              name: '',
+              component: 'textfield',
+              type: 'text',
+              value: 'burnsn {serial_number}'
+            }]
+          }
+        ]
       },
       {
         id: 10,
-        name: 'G BhPWD',
-        description: 'getBackhaulPWD',
-        params: {
-          access_type: 'telnet',
-          source: 'dut',
-          backhaul_pwd_cmd: 'input',
-          backhaul_pwd_pattern: 'input',
-          num_tries: 3
-        }
+        name: 'pingDUT',
+        description: 'Ping DUT',
+        title: 'Ping DUT',
+        sequenceTries: 0,
+        component: '',
+        type: '',
+        execute_once: false,
+        hasParameter: true,
+        parameters: [{
+          name: 'num_tries',
+          List: false,
+          component: 'textfield',
+          type: 'string',
+          value: 20
+        }]
       },
       {
         id: 11,
-        name: 'G BhPWD',
-        description: 'getBackhaulPWD',
-        params: {
-          access_type: 'telnet',
-          source: 'dut',
-          backhaul_pwd_cmd: 'input',
-          backhaul_pwd_pattern: 'input',
-          num_tries: 3
-        }
+        name: 'verifyOrbiInfo',
+        description: 'VF ORBINFO',
+        title: 'Verify Orbi Info',
+        sequenceTries: 0,
+        component: '',
+        type: '',
+        execute_once: false,
+        hasParameter: true,
+        parameters: [{
+            name: 'access_type',
+            List: false,
+            component: 'textfield',
+            type: 'text',
+            value: 'telnet'
+          },
+          {
+            name: 'cmds',
+            List: true,
+            values: [{
+              name: '',
+              component: 'textfield',
+              type: 'text',
+              value: 'burnsn'
+            }]
+          },
+          {
+            name: 'verification_outputs',
+            List: true,
+            values: [{
+              name: '',
+              component: 'textfield',
+              type: 'text',
+              value: '{serial_number}'
+            }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        name: 'sendCmds',
+        description: 'send Cmds',
+        title: 'Send Comands',
+        sequenceTries: 0,
+        component: '',
+        type: '',
+        execute_once: false,
+        hasParameter: true,
+        parameters: [{
+            name: 'access_type',
+            List: false,
+            component: 'textfield',
+            type: 'text',
+            value: 'telnet'
+          },
+          {
+            name: 'cmds',
+            List: true,
+            values: [
+              {
+                name: '',
+                component: 'textfield',
+                type: 'text',
+                value: 'loaddefault'
+              },
+              {
+                name: '',
+                component: 'textfield',
+                type: 'text',
+                value: 'nvram commit'
+              },
+              {
+                name: '',
+                component: 'textfield',
+                type: 'text',
+                value: 'reboot'
+              }
+            ]
+          }
+        ]
       }
-    ]
+    ],
+    xmlexample: '<?xml version="1.0" ?>  <TEST_SUITE>         <MODULE> Features_wifi_router </MODULE>         <TEST_SEQ_NUM_TRIES> 1 </TEST_SEQ_NUM_TRIES>         <TEST_SEQ_GRP>             <TEST_SEQ>                 <NORMAL_METHODS>  </TEST_SEQ>    </TEST_SUITE>'
   },
   mutations: {
     set_value: (state, prop) => {
@@ -541,6 +852,22 @@ export default new Vuex.Store({
         option: values.option,
         modelChilds: values.modelChilds,
         nameModel: values.nameModel
+      });
+    },
+    updateConfiguration({
+      commit,
+      state
+    }, values){
+
+      
+      state.xmlOptions = [...new Set(values.map((esc) => esc.number_approval))];
+
+        
+     
+
+      commit('set_valueStore', {
+        name: values.name,
+        value: values.data
       });
     }
   },

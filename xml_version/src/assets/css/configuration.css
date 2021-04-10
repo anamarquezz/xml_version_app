@@ -4,12 +4,12 @@
         "🤖 🤖 🤖"
         "⭐ ⚡ 🌵"      
         "⭐ 🌳 ☀️" 
-        "⭐ 🌳 ✨";           
-        height: 80vh;      
+        "⭐ 🌳 ✨";  
         margin: 0;
         padding: 0;      
         grid-template-columns: 150px 1fr 1fr;
-        grid-template-rows: 10vh 10vh 63vh;    
+        grid-template-rows: 8.4vh 6vh 1fr;  
+       
 }
 
 .web .test{
@@ -18,12 +18,14 @@
     display: flex;    
     flex-direction: column;  
     padding: 1.5rem;  
+    padding-top:3.5rem;
 }
 
 .web .header-title{  
     grid-area: 🤖;     
     margin: .5rem;
     border-radius: 1rem;
+ 
 }
 
 .web .header-title .subtitles{
@@ -32,9 +34,9 @@
 }
 
 .web .header-title .titles{   
-    width: 80%; 
+    width: 70%; 
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color:var(--primary);
     font-weight: bold;
 }
@@ -42,7 +44,7 @@
 .web .header-title .box-title{
     background-color: var(--neutralLight);
     width: 85vw;
-    height: 8vh;
+    height: 60px;
     margin-top: .4rem;
     border-radius: 1rem;
     display: flex;    
@@ -54,20 +56,33 @@
     color: white;
     opacity: 1;
     background: var(--primary) !important;
+    
 }
+
+.web .content .v-btn-toggle > .v-btn.v-btn {
+    color: white;
+    opacity: 1;     
+    height: 35px;
+	min-width: 126px;
+}
+
 
 .web .content  .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
     background-color:var(--secondaryLight);
     color: white;
 }
 
+.box-models .v-btn-toggle:not(.v-btn-toggle--dense) .v-btn.v-btn.v-size--default {
+    height: 37px;
+    min-height: 0; 
+}
 
 .web .test .option-test{
     display: flex;    
     flex-direction: column;  
 }
 .web .test .option-test  .v-btn.v-btn.v-size--default{
-    height: 38vh;
+    height: 280px;
     margin:.2rem;
 }
 
@@ -76,7 +91,9 @@
     /*background: rgb(197, 252, 249);  */
     display: flex;    
     flex-direction: row;  
-    padding-top: 1.5rem;  
+    padding-top: .7rem;
+    padding-right: 3rem;  
+    justify-content: space-between;
 }
 
 .b-models{
@@ -87,14 +104,14 @@
 .web .box-config-methods{
     grid-area:🌳;        
     margin:.3em 2rem 0 0rem;
-    box-shadow: 1px 2px 8px 2px #7e7e7e;  
+    box-shadow: 1px 2px 8px 2px #ebebeb;  
     display: grid;   
     grid-template-areas:  
         "⚽ ⚽ "      
         "⚾ 🏀 " 
         "🏐 🏐 ";    
         grid-template-columns: 150px 1fr;            
-        grid-template-rows: 5rem 1fr 5rem;  
+        grid-template-rows: 80px 450px 1fr;  
         
 }
 
@@ -106,14 +123,11 @@
     margin: .5rem; 
     background: #E6E8F4;
     display: flex;     
+    align-items: center;
 }  
 
 
-.v-btn:not(.v-btn--round).v-size--large {
-	height: 44px;
-	min-width: 126px;
-	padding: 0 19.5555555556px;
-}
+
 
 
 .box-config-top{
@@ -127,14 +141,13 @@
 
 .web  .box-config-methods .box-config-left{
     grid-area:⚾;   
-    margin: .5rem;  
+    margin: .4rem;  
     align-content: center;  
 }
 
 .box-config-left{
     display: flex;    
-    flex-direction: row;  
-    padding-top: 1.5rem;
+    flex-direction: row;      
 }
 
 
@@ -143,7 +156,38 @@
     grid-area:🏀; 
     margin: .5rem;
     background: #E6E8F4;
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    padding-top: 20px;
+    padding-left: 10px;
 }
+
+.web .box-config-right .formularcontainer {
+    display: grid;
+    grid-template-columns: 145px 1fr;
+    grid-gap: 10px;
+    grid-auto-rows: 30px; 
+    margin:1rem;   
+  
+}
+
+.web .box-config-right .formularcontainervalues {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  
+}
+
+.web .box-config-right .formularcontainervalues .box{
+  width: 150px; 
+  flex-grow: 1;
+  box-sizing: border-box;
+  margin: 0 5px 10px;
+  height: 45px;
+}
+
+
 
 .web .box-config-bottom{
     grid-area:🏐;      
@@ -153,13 +197,23 @@
 
 
 .web .box-generate{
-    grid-area:🌵;    
-    background: rgb(248, 243, 220);  
+    grid-area:🌵;     
+    display: flex; 
+    justify-content: space-between; 
+    padding: 0 30px 0 5px;
+   
 }
 
 .web .box-xml{
-    grid-area:☀️;    
-    background: rgb(242, 211, 226);  
+    grid-area:☀️;     
+    box-shadow: 0 1px 3px 1px #7e7e7e;  
+    width: 38vw;
+}
+
+.web .box-xml  textarea{
+    width: 100%;
+    height: 100%;
+    white-space:pre;
 }
 
 .web .box-actions{
